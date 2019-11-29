@@ -415,6 +415,9 @@ func (gt *Object) AddFieldConfig(fieldName string, fieldConfig *Field) {
 		gt.initialisedFields = false
 	}
 }
+func (gt *Object) RemoveField(fieldName string) {
+	delete(gt.fields, fieldName)
+}
 func (gt *Object) Name() string {
 	return gt.PrivateName
 }
